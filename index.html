@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DolceVía - Cakes & Sweets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <img src="dolcevia.png" alt="Logo DolceVía" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="banner section-animate" id="home">
+        <div class="container">
+            <h1 class="titulo-animate">Bem-vindo à DolceVía</h1>
+            <p>Os melhores bolos e doces para tornar seus momentos inesquecíveis.</p>
+            <a href="#produtos" class="btn">Ver Produtos</a>
+        </div>
+    </section>
+    <section class="produtos section-animate" id="produtos">
+        <div class="container">
+            <h2 class="titulo-animate">Nossos Produtos</h2>
+            <div class="produtos-categorias">
+                <button class="categoria-btn active" data-categoria="bolos">Bolos</button>
+                <button class="categoria-btn" data-categoria="doces">Doces</button>
+                <button class="categoria-btn" data-categoria="salgados">Salgados</button>
+                <button class="categoria-btn" data-categoria="kitfesta">Kit Festa</button>
+            </div>
+            <div class="produtos-lista">
+                <div class="produtos-categoria" id="bolos">
+                    <div class="produto-card card-animate">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Bolo de Chocolate">
+                        <h3>Bolo de Chocolate</h3>
+                        <p>Bolo fofinho com cobertura cremosa de chocolate.</p>
+                    </div>
+                    <div class="produto-card card-animate">
+                        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Bolo de Morango">
+                        <h3>Bolo de Morango</h3>
+                        <p>Bolo recheado com creme e morangos frescos.</p>
+                    </div>
+                </div>
+                <div class="produtos-categoria" id="doces" style="display:none;">
+                    <div class="produto-card card-animate">
+                        <img src="https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&fit=crop&w=400&q=80" alt="Brigadeiro Gourmet">
+                        <h3>Brigadeiro Gourmet</h3>
+                        <p>Clássico brigadeiro feito com chocolate belga.</p>
+                    </div>
+                    <div class="produto-card card-animate">
+                        <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Beijinho">
+                        <h3>Beijinho</h3>
+                        <p>Docinho de coco tradicional, coberto com açúcar cristal.</p>
+                    </div>
+                </div>
+                <div class="produtos-categoria" id="salgados" style="display:none;">
+                    <div class="produto-card card-animate">
+                        <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Coxinha">
+                        <h3>Coxinha</h3>
+                        <p>Clássica coxinha de frango cremosa e crocante.</p>
+                    </div>
+                    <div class="produto-card card-animate">
+                        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Quibe">
+                        <h3>Quibe</h3>
+                        <p>Quibe assado recheado com carne temperada.</p>
+                    </div>
+                </div>
+                <div class="produtos-categoria" id="kitfesta" style="display:none;">
+                    <div class="produto-card card-animate">
+                        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Kit Festa Infantil">
+                        <h3>Kit Festa Infantil</h3>
+                        <p>Combo com mini bolos, doces e salgados para festas.</p>
+                    </div>
+                    <div class="produto-card card-animate">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Kit Festa Adulto">
+                        <h3>Kit Festa Adulto</h3>
+                        <p>Kit especial para comemorações de adultos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sobre section-animate" id="sobre">
+        <div class="container sobre-flex">
+            <div class="sobre-texto card-animate">
+                <h2 class="titulo-animate">Sobre a DolceVía</h2>
+                <p>A DolceVía nasceu da paixão por confeitaria e pelo desejo de adoçar a vida das pessoas. Trabalhamos com ingredientes selecionados e receitas exclusivas para garantir sabor e qualidade em cada produto.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contato section-animate" id="contato">
+        <div class="container">
+            <h2 class="titulo-animate">Fale Conosco</h2>
+            <form class="contato-form card-animate">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container footer-flex">
+            <img src="footer.png" alt="Logo DolceVía" class="footer-logo">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
