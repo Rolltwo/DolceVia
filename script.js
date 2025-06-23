@@ -108,14 +108,16 @@ if (menuBtn && navUl) {
     });
 }
 
-document.querySelectorAll('.solicitar-btn').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    var card = btn.closest('.produto-card');
-    var nome = card.querySelector('h3').innerText;
-    var descricao = card.querySelector('p').innerText;
-    var mensagem = encodeURIComponent('Olá! Gostaria de solicitar o produto: ' + nome + '\nDescrição: ' + descricao);
-    var numero = '5511976405998';
-    var url = 'https://wa.me/' + numero + '?text=' + mensagem;
-    window.open(url, '_blank');
-  });
+document.querySelectorAll('.solicitar-btn').forEach((button) => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const produtoCard = button.closest('.produto-card');
+        const nomeProduto = produtoCard.querySelector('h3').innerText;
+        const descricaoProduto = produtoCard.querySelector('p').innerText;
+
+        const message = `Olá! Tenho interesse no produto *${nomeProduto}* (*${descricaoProduto}*). Quais as formas de pagamento?`;
+        const phoneNumber = '5533998632041';
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    });
 }); 
