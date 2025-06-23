@@ -60,4 +60,62 @@ if (form) {
         alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
         form.reset();
     });
-} 
+}
+
+// Botão voltar ao topo
+const btnTopo = document.getElementById('btn-topo');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 200) {
+        btnTopo.classList.add('visible');
+    } else {
+        btnTopo.classList.remove('visible');
+    }
+});
+if (btnTopo) {
+    btnTopo.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Carrossel de imagens dos produtos
+const carrossel = document.querySelector('.carrossel-imagens');
+const btnEsq = document.querySelector('.carrossel-btn-esq');
+const btnDir = document.querySelector('.carrossel-btn-dir');
+
+if (carrossel && btnEsq && btnDir) {
+    btnEsq.addEventListener('click', () => {
+        carrossel.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    btnDir.addEventListener('click', () => {
+        carrossel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+}
+
+// Menu mobile responsivo
+const menuBtn = document.querySelector('nav .menu-mobile');
+const navUl = document.querySelector('nav ul');
+if (menuBtn && navUl) {
+    menuBtn.addEventListener('click', function() {
+        navUl.classList.toggle('open');
+    });
+    // Fechar menu ao clicar em um link (mobile)
+    navUl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 600) {
+                navUl.classList.remove('open');
+            }
+        });
+    });
+}
+
+document.querySelectorAll('.solicitar-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var card = btn.closest('.produto-card');
+    var nome = card.querySelector('h3').innerText;
+    var descricao = card.querySelector('p').innerText;
+    var mensagem = encodeURIComponent('Olá! Gostaria de solicitar o produto: ' + nome + '\nDescrição: ' + descricao);
+    var numero = '5511976405998';
+    var url = 'https://wa.me/' + numero + '?text=' + mensagem;
+    window.open(url, '_blank');
+  });
+}); 
